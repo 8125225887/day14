@@ -1,0 +1,176 @@
+<html>
+<head>
+  <script src="jquery-1.11.3.min.js"></script>
+  <link rel='stylesheet' href="hyphen.css" />
+  <style>
+  #display{
+
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    margin-left: 300px;
+    margin-right: 250px;
+    margin-top: 100px;
+    padding: 15px;
+
+    }
+    #font{
+      font-size: 30px;
+    }
+    #or{
+      background-color: #4a148c;
+      border-radius: 5px;
+      font-size: 20px;
+      color: white;
+    }
+
+  </style>
+</head>
+  <body bgcolor= "#212121">
+    <form>
+    <div id = "display">
+
+
+
+                  <div class = "grid">
+                    <div class = "grid_item grid__item--7">
+                      <div class = "text--primary" id = "font">Sign In</div>
+                      <hr></hr>
+                    </div>
+                  </div>
+      <table>
+         <tr>
+            <td>
+                    <div class = "grid">
+                      <div class = "grid_item grid__item--3">
+                        <code>Email</code>
+                        <input class = "input" placeholder = "eg:-abcdefg@gmail.com">
+
+                        </div>
+
+
+                      </div>
+
+                      <br />
+
+                    <div class = "grid">
+                      <div class = "grid_item grid__item--3">
+                        <input type = "radio"><code>Iam a New User</code></input>
+                      </div>
+                    </div>
+
+
+                  <div class = "grid">
+                    <div class = "grid_item grid__item--3">
+                      <input type = "radio" ><code>Iam a Existing User</code></input>
+                    </div>
+                  </div>
+                </form>
+
+                <div class = "grid">
+                  <div class = "grid_item grid__item--3">
+                    <code>Password</code>
+                    <input class = "input" placeholder = "password">
+
+                  </div>
+                </div>
+
+
+                <div class = "grid">
+                  <div class = "grid_item grid__item--3">
+                      <input type = "checkbox" checked><code>Remember Me</code></input>
+                      <a href = "#" id = 'a' style = "float:right">Forgot Password </a>
+                    </div>
+                  </div>
+
+                  <div class = "grid">
+                    <div class = "grid_item grid__item--3">
+                      <div class = "btn btn--primary btn--large btn--round"><code><b>Go</b></code></input>
+                    </div>
+                  </div>
+                </div>
+
+            </td>
+            <td><center>
+              <div class = "grid">
+                <div class = "grid_item grid__item--1"><code><font id = "or" >OR</font></code></div>
+              </div></center>
+            </td>
+            <td>
+              <div class = "grid">
+                <div class = "grid_item grid__item--3">
+                  <div class="btn btn--alert btn--round">Sign With Google</div>
+                </div>
+                <div class = "grid">
+                  <div class = "grid_item grid__item--3">
+                    <div class="btn btn--secondary btn--round">Sign With Facebook</div>
+                  </div>
+              </div>
+            </td>
+          </tr>
+</table>
+
+
+    </div>
+
+ </div>
+ </form>
+ <div style = "display:none" id = "page2">
+
+   <div class = "grid">
+     <div class = "grid_item grid__item--7">
+       <div class = "text--primary" id = "font">Forgot Password ?</div>
+       <hr></hr>
+     </div>
+   </div>
+
+   <div class = "grid">
+     <div class = "grid_item grid__item--7">
+       <p><code>Enter your registered Email address and we'll send you a link to reset your password</code></p>
+       </div>
+     </div>
+
+     <div class = "grid">
+       <div class = "grid_item grid__item--4">
+         <code>Email</code>
+         <input class = "input" placeholder = "eg:-abcdefg@gmail.com">
+
+         </div>
+       </div>
+
+       <div class = "grid">
+         <div class = "grid_item grid__item--4">
+
+           <a href = "#" id = "a1">>>...back to SignIn....<a>
+
+           </div>
+         </div>
+
+         <br />
+       <div class = "grid">
+         <div class = "grid_item grid__item--3">
+           <div class = "btn btn--primary btn--large btn--round"><code><b>Go</b></code></input>
+         </div>
+       </div>
+       </div>
+
+
+   </div>
+
+<script>
+  $("#a").click(function(){
+    $("#display").html($("#page2").html(function(){
+      $("#page2").css("display","block",function(){
+        $("#display").hide();
+      });
+    }));
+  });
+  $("#a1").click(function(){
+
+        $("#display").show();
+          $("#page2").hide();
+  });
+</script>
+  </body>
+  </html>
